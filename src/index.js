@@ -106,7 +106,7 @@ export async function createWindowsInstaller(options) {
 
   log(`Created NuSpec file:\n${nuspecContent}`);
 
-  const nugetOutput = await createTempDir('si-');
+  const nugetOutput = await createTempDir('si');
   const targetNuspecPath = path.join(nugetOutput, metadata.name + '.nuspec');
 
   await fs.writeFile(targetNuspecPath, nuspecContent);
